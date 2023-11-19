@@ -21,6 +21,7 @@ const void collection::printList()
     unsigned int vectorSize= eventList.size();
         for(unsigned int t = 0; t < vectorSize;t++)
         {
+            std::cout<<"Event Name: " << eventList.at(t).get_name()<<"\n";
             std::cout<<"Date: "<<eventList.at(t).get_date()<<"\n";
             std::cout<<"Time: "<<eventList.at(t).get_time()<<"\n";
             std::cout<<"Location: "<<eventList.at(t).get_location()<<"\n";
@@ -41,10 +42,11 @@ const void collection::ListToHTML()
     unsigned int vectorSize= eventList.size();
         for(unsigned int t = 0; t < vectorSize;t++)
         {
-            userFile<<"<p>Date: "<<"<<"\n";
-            userFile<<"<p>Time: "<<"<<"\n";
-            userFile<<"<p>Location: "<<"<<"\n";
-            userFile<<"<p>Purpose: "<<"<<"\n";
+            userFile<<"<p>Event Name: " << eventList.at(t).get_name()<<"<p>\n";
+            userFile<<"<p>Date: "<<eventList.at(t).get_date()<<"<p>\n";
+            userFile<<"<p>Time: "<<eventList.at(t).get_time()<<"<p>\n";
+            userFile<<"<p>Location: "<<eventList.at(t).get_location()<<"<p>\n";
+            userFile<<"<p>Purpose: "<<eventList.at(t).get_purpose()<<"<p>\n";
         
         }
 
